@@ -22,3 +22,21 @@
 font-family: 'Grey Qo',
 cursive;
 }
+
+
+
+@media all and (max-width: 1200px) {
+
+  .ui[class*="three column"].grid>.column:not(.row),
+  .ui[class*="three column"].grid>.row>.column {
+    margin: auto;
+    width: 45%;
+  }
+}
+@media all and (max-width: 768px) {
+  .ui[class*="three column"].grid>.column:not(.row),
+  .ui[class*="three column"].grid>.row>.column {
+    margin: auto;
+    width: 80%;
+  }
+}
