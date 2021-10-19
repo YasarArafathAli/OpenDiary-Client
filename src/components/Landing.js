@@ -7,16 +7,19 @@ function Landing() {
     return (
         <div>
             <div className="banner">
+                <Image src ={image} fluid/>
                 <div  className='banner-info'>
                     <h1>
                         <span className='top'>TIME TO BE</span>
                         <br />
                         <span className='bottom theme'>SOCIAL</span>
                     </h1>
+                    <div className="btn-group">
                     <Link className='btn' to="/login">Login</Link>
                     <Link className='btn' to="/register">Register</Link>
+
+                    </div>
                 </div>
-                <Image src ={image} fluid/>
             {/* <img src={image} width='600' alt="" srcset="" /> */}
             </div>
         </div>  

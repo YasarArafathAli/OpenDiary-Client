@@ -21,6 +21,7 @@
 
 #heading{
   font-size: 40px;
+  min-width : 125px;
 font-family: 'Grey Qo', cursive;
 }
 
@@ -31,7 +32,7 @@ font-family: 'Grey Qo', cursive;
 
 .banner .banner-info{
   padding: 140px 0 20px 100px ;
-  /* text-align: center; */
+  text-align: center;
   /* display: flex; */
   flex-direction: column;
   align-items: center;
@@ -53,12 +54,18 @@ font-family: 'Grey Qo', cursive;
 .theme {
   color : #ff6149;
 }
-
+.btn-group{
+  margin-top: 50px;
+}
 .btn{
   padding: 10px 20px;
   background-color: #ff6149;
-  color: #000;
+  color: #fff;
   margin: 35px 20px 0 0;
+  border-radius: 5px;
+}
+.btn:hover{
+  color: #000;
 }
 @media all and (max-width: 1200px) {
 
@@ -86,4 +93,17 @@ font-family: 'Grey Qo', cursive;
   .banner{
     display:block;
   }
-}
+  .banner .banner-info {
+  padding: 10px 0 20px 10px;
+  }
+  .banner h1 .top {
+    font-size: 2rem;
+  }
+
+  .banner h1 .bottom {
+    font-size: 5rem;
+    margin-top: 0;
+
+  }
+
+} 
