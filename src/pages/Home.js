@@ -12,9 +12,6 @@ function Home() {
   const { user } = useContext(AuthContext);
   console.log(user)
   const { loading, data: { getPosts: posts } } = useQuery(FETCH_POSTS_QUERY);
-  const refresh = () => {
-    window.location.reload();
-  }
   if (user === null) {
     return <Landing />
   }
