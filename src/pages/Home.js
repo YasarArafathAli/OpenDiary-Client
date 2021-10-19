@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext} from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { Grid, Transition } from 'semantic-ui-react';
 
@@ -10,10 +10,11 @@ import { FETCH_POSTS_QUERY } from '../util/graphql';
 
 function Home() {
   const { user } = useContext(AuthContext);
-  // const [posts, setPosts] = useState([]);
+  console.log(user)
   const { loading, data: { getPosts: posts } } = useQuery(FETCH_POSTS_QUERY);
-  // setPosts(data);
- 
+  const refresh = () => {
+    window.location.reload();
+  }
   if (user === null) {
     return <Landing />
   }
@@ -32,7 +33,6 @@ function Home() {
           <h1>Loading posts..</h1>
         ) : (
           <Transition.Group>
-            {/* {forceUpdate()} */}
                 {posts &&
               posts.map((post) => (
                 post.college === user.college &&
