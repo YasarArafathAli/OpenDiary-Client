@@ -17,7 +17,8 @@ function MenuBar() {
     <Menu pointing secondary size="massive" color="teal">
 <Link style={{color: "#000"}} to="/"><h1 id = "heading" >Open <span className = 'theme' >Diary</span> </h1></Link>
       <Menu.Menu position="right">
-      <Menu.Item name={user.username} active as={Link} to="/" />
+      <Menu.Item name={user.username} onClick={handleItemClick}  active = {activeItem === user.username? true : false } as={Link} to="/" />
+        <Menu.Item name="profile" active={activeItem === 'profile'} as={Link} onClick={handleItemClick}  to="/profile" />
         <Menu.Item name="logout" onClick={logout} />
       </Menu.Menu>
     </Menu>
