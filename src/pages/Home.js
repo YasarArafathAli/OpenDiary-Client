@@ -29,7 +29,7 @@ function Home() {
           <h1>Loading posts..</h1>
         ) : (
           <Transition.Group>
-                {posts &&
+                {posts && user &&
               posts.map((post) => (
                 post.college === user.college &&
                 <Grid.Column key={post.id} style={{ marginBottom: 20 }}>
